@@ -25,10 +25,6 @@ const Summary = ({ route }) => {
         Summary
       </Text>
 
-      <Text testID="total" style={{ fontSize: 24, textAlign: 'center', marginBottom: 40 }}>
-        Total Score: {score} / {questions.length}
-      </Text>
-
       {questions.map((q, qIndex) => {
         const userAnswer = userAnswers[qIndex];
         const correct = q.correct;
@@ -78,6 +74,9 @@ const Summary = ({ route }) => {
           </View>
         );
       })}
+        <Text testID="total" style={{ fontSize: 24, textAlign: 'center', marginBottom: 40 }}>
+        Total Score: {score} / {questions.length}
+      </Text>
     </ScrollView>
   );
 };
